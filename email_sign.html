@@ -1,0 +1,91 @@
+<html>
+   <head>
+      <title>Email Signature</title>
+      <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+   </head>
+   <body style="font-size: 10pt; font-family: Arial, sans-serif;">
+      <div>
+         <!-- ngInclude: -->
+         <ng-include id="signaturePreview" src="selectedTemplatePath" class="ng-scope">
+            <!--UNCOMMENT <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+               <HTML><HEAD><TITLE>Email Signature</TITLE>
+               <META content="text/html; charset=utf-8" http-equiv="Content-Type">
+               </HEAD>
+               <BODY style="font-size: 10pt; font-family: Arial, sans-serif;">
+               UNCOMMENT-->
+            <table style="width: 450px; font-size: 10pt; font-family: Arial, sans-serif;" cellpadding="0" cellspacing="0" border="0" class="ng-scope">
+               <tbody>
+                  <tr>
+                     <td style="font-size: 10pt; font-family: Arial, sans-serif; border-right: 3px solid; border-right-color: #2196f3; width:180px; padding-right: 10px; vertical-align: top;" valign="top">
+                        <!-- ngIf: showField('photo') --><img ng-if="showField('photo')" ng-src="https://raw.githubusercontent.com/malav4395/profile_pic/3e2cc4ac67b0712e617e907782c3b80394649a6c/profile_pic.jpg" alt="photograph" width="120" border="0" style="border:0; height:auto; width:120px" class="ng-scope" src="https://raw.githubusercontent.com/malav4395/profile_pic/3e2cc4ac67b0712e617e907782c3b80394649a6c/profile_pic.jpg"><!-- end ngIf: showField('photo') --> 
+                        <p style="margin-top:20px; margin-bottom:0; line-height:1.2">
+                           <strong><span style="font-size: 16pt; font-family: Arial, sans-serif; color:#2196f3;" class="ng-binding">Malav Panchal<br></span></strong>
+                           <!-- ngIf: showField('title') --><span ng-if="showField('title')" style="font-family: Arial, sans-serif; font-size:10pt; color:#000000; font-weight: bold;" class="ng-binding ng-scope">REALTOR®</span><!-- end ngIf: showField('title') -->
+                        </p>
+                     </td>
+                     <td valign="top">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                           <tbody>
+                              <tr>
+                                 <td style="font-size: 10pt; color:#444444; font-family: Arial, sans-serif; padding-bottom: 5px; padding-left: 30px; vertical-align: top; line-height:1.3" valign="top">
+                                    <!-- ngIf: showField('mobile') --><span ng-if="showField('mobile')" class="ng-scope"><span style="color: #000000;"><strong>Mobile: </strong></span><span style="font-size: 9pt; font-family: Arial, sans-serif; color:#000000;" class="ng-binding"><a style="text-decoration: none; color: #000000;" href="tel:+16477084395">+1(647)-708-4395</a><br></span></span><!-- end ngIf: showField('mobile') -->
+                                    <!-- ngIf: showField('phone') --><span ng-if="showField('phone')" class="ng-scope"><span style="color: #000000;"><strong>Phone: </strong></span><span style="font-size: 9pt; font-family: Arial, sans-serif; color:#000000;" class="ng-binding"><a style="text-decoration: none; color: #000000;" href="tel:+15197425800">+1(519)-742-5800</a><br></span></span><!-- end ngIf: showField('phone') -->
+                                    <!-- ngIf: showField('email') --><span ng-if="showField('email')" class="ng-scope"><span style="color: #000000;"><strong>Email: </strong></span><span style="font-size: 9pt; font-family: Arial, sans-serif; color:#000000;" class="ng-binding"><a style="text-decoration: none; color: #000000;" href="mailto:realtor.malav@gmail.com">realtor.malav@gmail.com</a></span></span><!-- end ngIf: showField('email') -->
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td style="font-size: 10pt; color:#0079ac; font-family: Arial, sans-serif; padding-bottom: 5px; padding-left: 30px; vertical-align: top; line-height:1.3" valign="top">
+                                    <!-- ngIf: showField('company') --><strong ng-if="showField('company')" style="font-family: Arial, sans-serif; font-size:9pt; color:#000000;" class="ng-binding ng-scope">Coldwell Banker Peter Benninger Realty Ltd</strong><!-- end ngIf: showField('company') -->  
+                                    <!-- ngIf: isAnyFieldEntered('address1, address2') -->
+                                    <span ng-if="isAnyFieldEntered('address1, address2')" class="ng-scope">
+                                       <br>
+                                       <!-- ngIf: showField('address1') --><span ng-if="showField('address1')" style="font-size: 10pt; font-family: Arial, sans-serif; color: #000000;" class="ng-binding ng-scope"><a style="text-decoration: none; color: #000000;" href="https://goo.gl/maps/vvy8qvX4M38NLnsx6">508 Riverbend Dr,<br> Kitchener, ON N2K 3S2</a></span><!-- end ngIf: showField('address1') -->
+                                    </span>
+                                    <!-- end ngIf: isAnyFieldEntered('address1') -->		
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td style="font-size: 10pt; font-family: Arial, sans-serif; padding-bottom: 5px; padding-top: 5px; padding-left: 30px; vertical-align: top; color: #0079ac;" valign="top">
+                                    <a href="http://malavpanchal.ca/" target="_blank" rel="noopener" style="text-decoration:none;"><strong style="font-size: 12pt; font-family: Arial, sans-serif; color: #2196f3;" class="ng-binding">malavpanchal.ca</strong></a>
+                                 </td>
+                              </tr>
+                              <!-- ngIf: isAnyFieldEntered('facebookURL, twitterURL, youtubeURL, linkedinURL, instagramURL, pinterestURL') -->
+                              <tr ng-if="isAnyFieldEntered('facebookURL, twitterURL, youtubeURL, linkedinURL, instagramURL, pinterestURL')" class="ng-scope">
+                                 <td style="font-size: 10pt; font-family: Arial, sans-serif; padding-top: 15px; padding-left: 30px; vertical-align: bottom;" valign="top">
+                                    <!-- FACEBOOK -->
+                                    <span ng-if="showField('facebookURL')" class="ng-scope"><a href="https://www.facebook.com/realtormalav" target="_blank" rel="noopener"><img border="0" width="22" ng-src="https://github.com/malav4395/profile_pic/blob/main/facebook.png?raw=true" alt="facebook icon" style="border:0; height:22px; width:22px" src="https://github.com/malav4395/profile_pic/blob/main/facebook.png?raw=true"></a>&nbsp;</span>          
+                                    <!-- end FACEBOOK -->
+                                    <!-- ngIf: showField('twitterURL') -->
+                                    <span ng-if="showField('twitterURL')" class="ng-scope"><a href="https://api.whatsapp.com/send?phone=16477084395&fbclid=IwAR2XTAOAlZdwc0sTbDoxU7Dr_Fnbr5B_zatjztiW1S6z01JpPQ6BpVzjFMA" target="_blank" rel="noopener"><img border="0" width="22" ng-src="https://codetwocdn.azureedge.net/images/mail-signatures/generator-dm/rounded-squares/tt.png" alt="twitter icon" style="border:0; height:22px; width:22px" src="https://github.com/malav4395/profile_pic/blob/main/whatsapp.png?raw=true"></a>&nbsp;</span>
+                                    <!-- end ngIf: showField('twitterURL') -->
+                                    <!-- ngIf: showField('instagramURL') -->
+                                    <span ng-if="showField('instagramURL')" class="ng-scope"><a href="https://www.instagram.com/realtor_malav/" target="_blank" rel="noopener"><img border="0" width="22" ng-src="https://github.com/malav4395/profile_pic/blob/main/instagram.png?raw=true" alt="instagram icon" style="border:0; height:22px; width:22px" src="https://github.com/malav4395/profile_pic/blob/main/instagram.png?raw=true"></a>&nbsp;</span>
+                                    <!-- end ngIf: showField('instagramURL') -->
+                                    <!-- ngIf: showField('TiktokURL') -->
+                                    <span ng-if="showField('instagramURL')" class="ng-scope"><a href="https://www.tiktok.com/@realtor_malav?" target="_blank" rel="noopener"><img border="0" width="22" ng-src="https://github.com/malav4395/profile_pic/blob/main/tiktok.png?raw=true" alt="instagram icon" style="border:0; height:22px; width:22px" src="https://github.com/malav4395/profile_pic/blob/main/tiktok.png?raw=true"></a>&nbsp;</span>
+                                    <!-- end ngIf: showField('TiktokURL') -->
+                                 </td>
+                              </tr>
+                              <!-- end ngIf: isAnyFieldEntered('facebookURL, twitterURL, youtubeURL, linkedinURL, instagramURL, pinterestURL') -->
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+                  <!-- ngIf: showField('banner') -->
+                  <tr ng-if="showField('banner')" class="ng-scope">
+                     <td colspan="2" style="padding-top:20px">
+                        <!-- ngIf: showField('bannerURL') --><a ng-if="showField('bannerURL')" href="https://meetings.hubspot.com/malav-panchal" target="_blank" rel="noopener" class="ng-scope"><img border="0" ng-src="https://raw.githubusercontent.com/malav4395/profile_pic/main/banner.png" alt="Banner" style="max-width:450px; height:auto; border:0;" src="https://raw.githubusercontent.com/malav4395/profile_pic/main/banner.png"></a><!-- end ngIf: showField('bannerURL') -->
+                        <!-- ngIf: !showField('bannerURL') -->
+                     </td>
+                  </tr>
+                  <!-- end ngIf: showField('banner') -->
+               </tbody>
+            </table>
+            <!--UNCOMMENT
+               </BODY>
+               </HTML>
+               UNCOMMENT-->
+         </ng-include>
+      </div>
+   </body>
+</html>
